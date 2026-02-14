@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: ["/favicon.png", "/icon.svg"],
-    shortcut: ["/favicon.png", "/icon.svg"],
-    apple: ["/favicon.png", "/icon.svg"],
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     type: "website",
