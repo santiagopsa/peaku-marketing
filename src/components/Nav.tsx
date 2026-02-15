@@ -18,6 +18,7 @@ export default function Nav({ locale = "en" }: NavProps) {
       ? "/es"
       : `/es${pathname}`;
   const investorsHref = isEs ? "/es/investors" : "/investors";
+  const aboutHref = isEs ? "/es/about" : "/about";
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-firo-navy/70 text-white backdrop-blur-xl">
@@ -35,6 +36,7 @@ export default function Nav({ locale = "en" }: NavProps) {
 
         <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">
           <a href={investorsHref} className="hover:text-white">{isEs ? "Inversionistas" : "Investors"}</a>
+          <a href={aboutHref} className="hover:text-white">{isEs ? "Nosotros" : "About"}</a>
           <a href="#thesis" className="hover:text-white">{isEs ? "Tesis" : "Thesis"}</a>
           <a href="#roi" className="hover:text-white">ROI</a>
           <a href="#quote" className="hover:text-white">{isEs ? "Contacto" : "Contact"}</a>
