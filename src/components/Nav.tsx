@@ -55,12 +55,6 @@ export default function Nav({ locale = "en" }: NavProps) {
           >
             {isEs ? "Descargar guia" : "Download guide"}
           </a>
-          <a
-            href={guideHref}
-            className="rounded-xl bg-firo-blue px-3 py-2 text-sm font-semibold hover:opacity-95 md:px-4"
-          >
-            {isEs ? "Quiero la guia" : "I want the guide"}
-          </a>
         </div>
       </div>
     </div>

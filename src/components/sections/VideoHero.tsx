@@ -117,12 +117,6 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
               >
                 {isEs ? "Descargar guia gratuita" : "Download free guide"}
               </a>
-              <a
-                href="#join"
-                className="rounded-xl border border-firo-line bg-white px-5 py-3 text-sm font-semibold text-firo-text hover:bg-firo-bg"
-              >
-                {isEs ? "Quiero la guia" : "I want the guide"}
-              </a>
             </div>
 
             <p className="mt-3 text-xs text-firo-muted">
