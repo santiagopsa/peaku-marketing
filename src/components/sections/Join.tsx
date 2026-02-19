@@ -26,13 +26,14 @@ export default function Join({ locale = "en" }: JoinProps) {
 
             <div className="rounded-2xl bg-white p-6 shadow-soft">
               <form
-                action="https://formsubmit.co/santiagopsa@gmail.com"
+                action="https://formsubmit.co/luisa@peaku.co"
                 method="POST"
                 className="space-y-4"
               >
                 <input type="hidden" name="_subject" value="PeakU Guia gratuita para reclutadores" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_cc" value="santiago@peaku.co" />
 
                 <div>
                   <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="name">

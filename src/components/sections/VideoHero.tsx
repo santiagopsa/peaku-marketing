@@ -103,7 +103,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 href="#join"
                 className="rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
               >
-                {isEs ? "Descargar guía gratuita" : "Download free guide"}
+                {isEs ? "Descarga guía gratuita" : "Download free guide"}
               </a>
             </div>
 
