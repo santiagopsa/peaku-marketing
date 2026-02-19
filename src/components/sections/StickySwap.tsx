@@ -11,10 +11,10 @@ const cards = [
   { title: "Your work becomes visible", desc: "The depth of your recruiting process is no longer hidden behind opinions." },
 ];
 const cardsEs = [
-  { title: "Beneficio premium para tu comunidad", desc: "Las personas y empresas de tu coworking acceden a publicar una vacante premium con PeakU." },
-  { title: "Activación sin costo", desc: "Tu coworking no paga por participar: solo activas el partnership y empezamos juntos." },
-  { title: "Visibilidad y crecimiento para ambos", desc: "PeakU se da a conocer en nuevas comunidades y tu coworking suma una propuesta diferencial." },
-  { title: "Tambien para contratar talento", desc: "El mismo coworking puede usar la herramienta para encontrar talento cuando lo necesite." },
+  { title: "Decisiones respaldadas con evidencia", desc: "Cada recomendación se presenta con criterios claros y señales objetivas." },
+  { title: "Menos reprocesos de selección", desc: "Una estructura compartida evita reinicios, demoras y discusiones circulares." },
+  { title: "Mayor confianza del líder contratante", desc: "El líder entiende por qué el candidato encaja antes de decidir por intuición." },
+  { title: "Tu trabajo se vuelve visible", desc: "El valor de tu proceso deja de perderse en opiniones aisladas." },
 ];
 
 type StickySwapProps = {
@@ -59,11 +59,11 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
         <div className="grid gap-10 md:grid-cols-2">
           <div className="md:sticky md:top-24 md:h-fit">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Lo que gana tu coworking al activar el partnership" : "What changes when evidence is shared"}
+              {isEs ? "Lo que cambia cuando hay evidencia compartida" : "What changes when evidence is shared"}
             </h2>
             <p className="mt-4 max-w-lg text-firo-muted">
               {isEs
-                ? "Convertimos una activacion simple en un beneficio concreto para tu comunidad y en una oportunidad de crecimiento para ambas partes."
+                ? "No se trata de convencer con más opinión. Se trata de mostrar mejor el trabajo que ya haces."
                 : "It is not about arguing harder. It is about making your process visible and credible."}
             </p>
           </div>

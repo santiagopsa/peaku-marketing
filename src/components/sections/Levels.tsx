@@ -33,27 +33,27 @@ const levels = [
 const levelsEs = [
   {
     level: "Paso 1",
-    title: "Activación",
-    earns: "Tu coworking activa el partnership con PeakU",
-    does: "Sin costo y con implementación guiada",
+    title: "Señal",
+    earns: "Haces el trabajo de diagnóstico más complejo",
+    does: "Filtro, entrevistas y notas estructuradas",
   },
   {
     level: "Paso 2",
-    title: "Difusión",
-    earns: "Recibes un kit físico para comunicar el beneficio",
-    does: "Piezas listas para compartir con tu comunidad",
+    title: "Recomendación",
+    earns: "Presentas candidatos con criterio claro",
+    does: "Evidencia técnica y humana, no opiniones sueltas",
   },
   {
     level: "Paso 3",
-    title: "Acceso directo",
-    earns: "Lanzamos una landing del partnership de tu coworking",
-    does: "Tu comunidad entra y activa el beneficio fácilmente",
+    title: "Rechazo",
+    earns: "La decisión llega sin estructura",
+    does: "\"No me convenció\" sin criterios compartidos",
   },
   {
     level: "Paso 4",
-    title: "Valor compartido",
-    earns: "Tu comunidad publica vacantes premium en PeakU",
-    does: "Tu coworking tambien puede usar PeakU para encontrar talento",
+    title: "Reproceso",
+    earns: "Se reinicia la selección y cae la confianza",
+    does: "Se pierde tiempo para reclutador, líder y candidato",
   },
 ];
 
@@ -95,11 +95,11 @@ export default function Levels({ locale = "en" }: LevelsProps) {
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="md:sticky md:top-28">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Una activación liviana que crea valor para todos" : "This is not a talent problem. It is a trust problem."}
+              {isEs ? "No es un problema de talento. Es un problema de confianza." : "This is not a talent problem. It is a trust problem."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "El coworking ofrece un beneficio de alto impacto para su comunidad sin asumir costos. PeakU gana visibilidad y, cuando el partnership funciona bien, se abre la puerta a nuevos clientes."
+                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratación se sostengan internamente."
                 : "Teams rarely question the process itself. They question the recruiter’s judgment. PeakU adds structured evidence to make hiring decisions defensible."}
             </p>
           </div>

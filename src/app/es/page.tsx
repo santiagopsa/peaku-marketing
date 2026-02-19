@@ -9,16 +9,16 @@ import Join from "@/components/sections/Join";
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "PeakU | Partnership para coworkings y su comunidad",
+  title: "PeakU | Guía para reclutadores que necesitan respaldo interno",
   description:
-    "Activa el partnership de PeakU en tu coworking y ofrece a tu comunidad una vacante premium sin costo.",
+    "PeakU te ayuda a presentar candidatos con evidencia estructurada y criterios compartidos. Recibe la guía directamente por WhatsApp.",
   keywords: [
-    "partnership coworking",
-    "beneficios para comunidad coworking",
-    "vacante premium PeakU",
-    "talento para coworking",
-    "alianzas para coworkings",
-    "PeakU coworkings",
+    "guía para reclutadores",
+    "herramientas para reclutadores",
+    "respaldo interno en reclutamiento",
+    "evidencia estructurada selección",
+    "defender candidatos",
+    "reducir reprocesos de selección",
   ],
   alternates: {
     canonical: `${SITE_URL}/es`,
@@ -30,24 +30,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     locale: "es_ES",
-    title: "PeakU | Activa el partnership en tu coworking",
+    title: "PeakU | Reclutamiento con evidencia y confianza interna",
     description:
-      "Dale a tu comunidad acceso directo a una vacante premium en PeakU y recibe un kit para difundir el beneficio.",
+      "Guía práctica para reclutadores: presenta candidatos con claridad, evidencia y menos discusiones subjetivas.",
     url: `${SITE_URL}/es`,
     images: [
       {
         url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
-        alt: "Partnership de PeakU para comunidades de coworkings",
+        alt: "Dashboard de PeakU para respaldar decisiones de selección",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PeakU | Partnership para coworkings",
+    title: "PeakU | Guía para reclutadores con evidencia y claridad",
     description:
-      "Activa gratis el partnership y comparte en tu comunidad el acceso a una vacante premium.",
+      "Recibe la guía de reclutamiento por WhatsApp y mejora cómo presentas candidatos.",
     images: [DEFAULT_OG_IMAGE],
   },
 };
