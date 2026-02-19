@@ -1,29 +1,49 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Container from "@/components/ui/Container";
-import { getFaqPageSchema } from "@/lib/seoSchemas";
+import { getBreadcrumbSchema, getFaqPageSchema, getWebPageSchema } from "@/lib/seoSchemas";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "FIRO Inversionistas | Tesis de leasing, unit economics, riesgos y FAQ",
   description:
     "Resumen para inversionistas de FIRO: tesis de leasing, unit economics, mitigaciones de riesgo, mapa competitivo y contacto.",
+  keywords: [
+    "FIRO inversionistas",
+    "inversión en robótica",
+    "leasing unit economics",
+    "tesis de mercado robótica",
+    "FAQ inversionista",
+  ],
   alternates: {
-    canonical: "/es/investors",
+    canonical: `${SITE_URL}/es/investors`,
+    languages: {
+      en: `${SITE_URL}/investors`,
+      es: `${SITE_URL}/es/investors`,
+      "x-default": `${SITE_URL}/investors`,
+    },
   },
   openGraph: {
     locale: "es_ES",
     title: "FIRO Inversionistas | Tesis de leasing, unit economics, riesgos y FAQ",
     description:
       "Modelo de inversión FIRO con enfoque leasing, supuestos transparentes, riesgos y formulario de contacto.",
-    url: "/es/investors",
+    url: `${SITE_URL}/es/investors`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "Resumen de inversión FIRO",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FIRO Inversionistas | Tesis de leasing y unit economics",
+    description:
+      "Resumen para inversionistas: escenarios, mitigaciones de riesgo y contacto.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -115,10 +135,29 @@ export default function InvestorsPageEs() {
       answer: item.a,
     }))
   );
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Inicio", url: `${SITE_URL}/es` },
+    { name: "Inversionistas", url: `${SITE_URL}/es/investors` },
+  ]);
+  const webPageSchema = getWebPageSchema({
+    name: "FIRO Inversionistas",
+    description:
+      "Resumen para inversionistas de FIRO: tesis de leasing, unit economics, mitigaciones de riesgo, mapa competitivo y contacto.",
+    url: `${SITE_URL}/es/investors`,
+    inLanguage: "es",
+  });
 
   return (
     <main id="top">
       <Nav locale="es" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

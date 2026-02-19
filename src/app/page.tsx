@@ -6,27 +6,49 @@ import Levels from "@/components/sections/Levels";
 import StickySwap from "@/components/sections/StickySwap";
 import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "PeakU | Guía para reclutadores que necesitan respaldo interno",
+  title: "PeakU | Recruiter guide to defend candidates with evidence",
   description:
-    "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
+    "PeakU helps recruiters present candidates with structured evidence and shared criteria. Get the guide via WhatsApp and reduce hiring rework.",
+  keywords: [
+    "recruiter guide",
+    "recruiter tools",
+    "hiring evidence framework",
+    "candidate recommendation support",
+    "reduce hiring rework",
+    "hiring manager alignment",
+  ],
   alternates: {
-    canonical: "/",
+    canonical: `${SITE_URL}/`,
+    languages: {
+      en: `${SITE_URL}/`,
+      es: `${SITE_URL}/es`,
+      "x-default": `${SITE_URL}/`,
+    },
   },
   openGraph: {
-    title: "PeakU | Reclutamiento con evidencia y confianza interna",
+    locale: "en_US",
+    title: "PeakU | Recruiter guide to defend candidates with evidence",
     description:
-      "Descarga una guía práctica para presentar candidatos con claridad, datos y criterios que los líderes entienden.",
-    url: "/",
+      "Practical guide for recruiters to present candidates with clarity, evidence, and shared criteria.",
+    url: `${SITE_URL}/`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "PeakU dashboard for recruiter decision support",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PeakU | Recruiter guide to defend candidates with evidence",
+    description:
+      "Get the practical recruiter guide and receive it via WhatsApp.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

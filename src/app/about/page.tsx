@@ -1,34 +1,76 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Container from "@/components/ui/Container";
+import { getBreadcrumbSchema, getWebPageSchema } from "@/lib/seoSchemas";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About FIRO | Thesis and leasing operating model",
   description:
     "Learn what FIRO is, who it serves, the problem it solves, how the leasing model works, and why robotics cashflow is a timely opportunity.",
+  keywords: [
+    "about FIRO",
+    "robotics investment model",
+    "leasing operations model",
+    "humanoid robotics cashflow",
+    "FIRO thesis",
+  ],
   alternates: {
-    canonical: "/about",
+    canonical: `${SITE_URL}/about`,
+    languages: {
+      en: `${SITE_URL}/about`,
+      es: `${SITE_URL}/es/about`,
+      "x-default": `${SITE_URL}/about`,
+    },
   },
   openGraph: {
+    locale: "en_US",
     title: "About FIRO | Thesis and leasing operating model",
     description:
       "FIRO overview for investors and technology enthusiasts: market thesis, operations model, risks, and contact.",
-    url: "/about",
+    url: `${SITE_URL}/about`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "FIRO company and model overview",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About FIRO | Thesis and leasing operating model",
+    description:
+      "Understand FIRO's leasing-first model, operating thesis, and why this market is growing.",
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function AboutPage() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: `${SITE_URL}/` },
+    { name: "About", url: `${SITE_URL}/about` },
+  ]);
+  const webPageSchema = getWebPageSchema({
+    name: "About FIRO",
+    description:
+      "FIRO overview for investors and technology enthusiasts: market thesis, operations model, risks, and contact.",
+    url: `${SITE_URL}/about`,
+    inLanguage: "en",
+  });
+
   return (
     <main id="top">
       <Nav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
 
       <section className="bg-gradient-to-b from-firo-navy via-slate-900 to-slate-950 pb-20 pt-28 text-white">
         <Container>

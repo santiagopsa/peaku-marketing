@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Container from "@/components/ui/Container";
-import { getFaqPageSchema } from "@/lib/seoSchemas";
+import { getBreadcrumbSchema, getFaqPageSchema, getWebPageSchema } from "@/lib/seoSchemas";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 const thesisPoints = [
   "Humanoid robotics has moved from demos into real commercial deployments.",
@@ -88,22 +89,42 @@ export const metadata: Metadata = {
   title: "FIRO Investors | Leasing thesis, unit economics, risks, and FAQ",
   description:
     "Investor brief covering FIRO leasing thesis, unit economics, risk mitigation, competitive map, and direct investor contact.",
+  keywords: [
+    "FIRO investors",
+    "robotics investment",
+    "leasing unit economics",
+    "humanoid robotics thesis",
+    "investor FAQ robotics",
+  ],
   alternates: {
-    canonical: "/investors",
+    canonical: `${SITE_URL}/investors`,
+    languages: {
+      en: `${SITE_URL}/investors`,
+      es: `${SITE_URL}/es/investors`,
+      "x-default": `${SITE_URL}/investors`,
+    },
   },
   openGraph: {
+    locale: "en_US",
     title: "FIRO Investors | Leasing thesis, unit economics, risks, and FAQ",
     description:
       "Explore FIRO leasing-first investor model with transparent assumptions, risk controls, and contact form.",
-    url: "/investors",
+    url: `${SITE_URL}/investors`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "FIRO investor brief",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FIRO Investors | Leasing thesis and unit economics",
+    description:
+      "Investor brief with unit economics, scenarios, risk controls, and FAQ.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -114,10 +135,29 @@ export default function InvestorsPage() {
       answer: item.a,
     }))
   );
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", url: `${SITE_URL}/` },
+    { name: "Investors", url: `${SITE_URL}/investors` },
+  ]);
+  const webPageSchema = getWebPageSchema({
+    name: "FIRO Investors",
+    description:
+      "Investor brief covering FIRO leasing thesis, unit economics, risk mitigation, competitive map, and direct investor contact.",
+    url: `${SITE_URL}/investors`,
+    inLanguage: "en",
+  });
 
   return (
     <main id="top">
       <Nav />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

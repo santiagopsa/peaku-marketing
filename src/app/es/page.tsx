@@ -6,28 +6,49 @@ import Levels from "@/components/sections/Levels";
 import StickySwap from "@/components/sections/StickySwap";
 import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "PeakU | Guía para reclutadores que necesitan respaldo interno",
   description:
-    "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
+    "PeakU te ayuda a presentar candidatos con evidencia estructurada y criterios compartidos. Recibe la guía directamente por WhatsApp.",
+  keywords: [
+    "guía para reclutadores",
+    "herramientas para reclutadores",
+    "respaldo interno en reclutamiento",
+    "evidencia estructurada selección",
+    "defender candidatos",
+    "reducir reprocesos de selección",
+  ],
   alternates: {
-    canonical: "/es",
+    canonical: `${SITE_URL}/es`,
+    languages: {
+      en: `${SITE_URL}/`,
+      es: `${SITE_URL}/es`,
+      "x-default": `${SITE_URL}/`,
+    },
   },
   openGraph: {
     locale: "es_ES",
     title: "PeakU | Reclutamiento con evidencia y confianza interna",
     description:
-      "Descarga una guía práctica para presentar candidatos con claridad, datos y criterios que los líderes entienden.",
-    url: "/es",
+      "Guía práctica para reclutadores: presenta candidatos con claridad, evidencia y menos discusiones subjetivas.",
+    url: `${SITE_URL}/es`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "Dashboard de PeakU para respaldar decisiones de selección",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PeakU | Guía para reclutadores con evidencia y claridad",
+    description:
+      "Recibe la guía de reclutamiento por WhatsApp y mejora cómo presentas candidatos.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

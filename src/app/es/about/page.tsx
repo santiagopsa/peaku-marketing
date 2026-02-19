@@ -1,35 +1,76 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Container from "@/components/ui/Container";
+import { getBreadcrumbSchema, getWebPageSchema } from "@/lib/seoSchemas";
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sobre FIRO | Tesis y modelo operativo con leasing",
   description:
     "Conoce qué es FIRO, para quién es, qué problema resuelve, cómo funciona el modelo con leasing y la visión de crecimiento en activos robóticos.",
+  keywords: [
+    "sobre FIRO",
+    "modelo operativo con leasing",
+    "inversión en robótica",
+    "tesis FIRO",
+    "cashflow robótica",
+  ],
   alternates: {
-    canonical: "/es/about",
+    canonical: `${SITE_URL}/es/about`,
+    languages: {
+      en: `${SITE_URL}/about`,
+      es: `${SITE_URL}/es/about`,
+      "x-default": `${SITE_URL}/about`,
+    },
   },
   openGraph: {
     locale: "es_ES",
     title: "Sobre FIRO | Tesis y modelo operativo con leasing",
     description:
       "Resumen de FIRO para inversionistas y entusiastas: tesis de mercado, operación y contacto.",
-    url: "/es/about",
+    url: `${SITE_URL}/es/about`,
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
         alt: "Resumen de FIRO y su modelo operativo",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sobre FIRO | Tesis y modelo operativo con leasing",
+    description:
+      "Conoce la tesis de FIRO, su operación y cómo funciona su estructura de leasing.",
+    images: [DEFAULT_OG_IMAGE],
+  },
 };
 
 export default function AboutPageEs() {
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Inicio", url: `${SITE_URL}/es` },
+    { name: "Sobre FIRO", url: `${SITE_URL}/es/about` },
+  ]);
+  const webPageSchema = getWebPageSchema({
+    name: "Sobre FIRO",
+    description:
+      "Resumen de FIRO para inversionistas y entusiastas: tesis de mercado, operación y contacto.",
+    url: `${SITE_URL}/es/about`,
+    inLanguage: "es",
+  });
+
   return (
     <main id="top">
       <Nav locale="es" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
 
       <section className="bg-gradient-to-b from-firo-navy via-slate-900 to-slate-950 pb-20 pt-28 text-white">
         <Container>

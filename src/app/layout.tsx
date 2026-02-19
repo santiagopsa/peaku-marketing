@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,31 +14,34 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.firoassets.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "FIRO | Robotic Assets, Real Yield",
-    template: "%s | FIRO",
+    default: "PeakU | Guide for recruiters who need internal backing",
+    template: "%s | PeakU",
   },
   description:
-    "FIRO turns humanoid robots into yield-generating assets. Own the unit, FIRO runs ops, and track utilization, uptime, and payouts in one dashboard.",
+    "PeakU helps recruiters defend candidates with structured evidence, clear reports, and hiring criteria that leaders can trust.",
   keywords: [
-    "FIRO",
-    "robotic assets",
-    "robot investment",
-    "humanoid robots",
-    "robotics yield",
-    "events robotics",
-    "robot ROI",
-    "automation",
+    "PeakU",
+    "recruiter tools",
+    "hiring decision support",
+    "candidate evaluation framework",
+    "evidence based hiring",
+    "defend candidate recommendations",
+    "reduce hiring rework",
+    "recruitment process optimization",
+    "herramientas para reclutadores",
+    "respaldo interno reclutamiento",
   ],
-  authors: [{ name: "FIRO", url: "https://www.firoassets.com" }],
-  creator: "FIRO",
-  publisher: "FIRO",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   alternates: {
-    canonical: "/",
+    canonical: `${SITE_URL}/`,
     languages: {
-      en: "/",
-      es: "/es",
+      en: `${SITE_URL}/`,
+      es: `${SITE_URL}/es`,
+      "x-default": `${SITE_URL}/`,
     },
   },
   robots: {
@@ -59,28 +63,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
-    siteName: "FIRO",
-    title: "FIRO | Robotic Assets, Real Yield",
+    url: `${SITE_URL}/`,
+    siteName: SITE_NAME,
+    title: "PeakU | Recruiter guide with structured hiring evidence",
     description:
-      "Own or finance a robot. FIRO operates deployment and tracks utilization, uptime, and payouts.",
+      "Get the practical recruiter guide to present candidates with evidence and reduce subjective hiring feedback.",
     images: [
       {
-        url: "/assets/hero/dashboard.png",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 800,
-        alt: "FIRO dashboard preview",
+        alt: "PeakU dashboard preview for recruiter reports",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FIRO | Robotic Assets, Real Yield",
+    title: "PeakU | Recruiter guide with structured hiring evidence",
     description:
-      "FIRO converts humanoid robots into measurable, managed, yield-generating assets.",
-    images: ["/assets/hero/dashboard.png"],
+      "A practical guide to help recruiters defend candidates with clear, comparable evidence.",
+    images: [DEFAULT_OG_IMAGE],
   },
-  category: "technology",
+  category: "human resources",
 };
 
 export default function RootLayout({
