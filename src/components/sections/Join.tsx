@@ -14,12 +14,12 @@ export default function Join({ locale = "en" }: JoinProps) {
             <div>
               <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
                 {isEs
-                  ? "Cómo defender tus candidatos sin entrar en discusiones subjetivas"
+                  ? "Activa el partnership de PeakU para tu coworking"
                   : "Free guide: How to defend your candidates without subjective debates"}
               </h2>
               <p className="mt-3 text-firo-muted">
                 {isEs
-                  ? "Un framework práctico para presentar candidatos con claridad, datos y argumentos que los líderes sí entienden. Te enviamos la guía directamente por WhatsApp."
+                  ? "Te contactamos por WhatsApp para activar la alianza sin costo, coordinar el envio del kit y publicar la landing de partnership para tu comunidad."
                   : "A practical framework recruiters use to present candidates with clarity, evidence, and arguments leaders can understand. We will send the guide directly to your WhatsApp."}
               </p>
             </div>
@@ -30,14 +30,14 @@ export default function Join({ locale = "en" }: JoinProps) {
                 method="POST"
                 className="space-y-4"
               >
-                <input type="hidden" name="_subject" value="PeakU Guia gratuita para reclutadores" />
+                <input type="hidden" name="_subject" value="PeakU | Activacion de partnership para coworking" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_cc" value="santiago@peaku.co" />
 
                 <div>
                   <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="name">
-                    {isEs ? "Nombre" : "Name"}
+                    {isEs ? "Nombre del lider o dueno" : "Name"}
                   </label>
                   <input
                     id="name"
@@ -65,7 +65,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                   type="submit"
                   className="w-full rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
                 >
-                  {isEs ? "Recibir guía por WhatsApp" : "Send guide via WhatsApp"}
+                  {isEs ? "Quiero activar el partnership" : "Send guide via WhatsApp"}
                 </button>
               </form>
             </div>
@@ -73,7 +73,7 @@ export default function Join({ locale = "en" }: JoinProps) {
 
           <div className="mt-6 text-xs text-firo-muted">
             {isEs
-              ? "Sin spam. Solo usamos tu WhatsApp para enviarte la guía."
+              ? "Sin spam. Solo usamos tu WhatsApp para coordinar la activacion del partnership."
               : "No spam. We only use your WhatsApp to send the guide."}
           </div>
         </div>

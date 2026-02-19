@@ -20,9 +20,9 @@ export default function Nav({ locale = "en" }: NavProps) {
       : `/es${pathname}`;
   const homePath = isEs ? "/es" : "/";
   const homeHref = isHomePath ? "#top" : homePath;
-  const anchorHref = (id: "quote") =>
+  const anchorHref = (id: "join") =>
     isHomePath ? `#${id}` : `${homePath}#${id}`;
-  const guideHref = anchorHref("quote");
+  const guideHref = anchorHref("join");
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 border-b border-firo-line bg-white/85 text-firo-text backdrop-blur-xl">
@@ -39,7 +39,7 @@ export default function Nav({ locale = "en" }: NavProps) {
         </a>
 
         <nav className="hidden items-center gap-7 text-sm text-firo-muted md:flex">
-          <a href={guideHref} className="hover:text-firo-text">{isEs ? "Guía" : "Guide"}</a>
+          <a href={guideHref} className="hover:text-firo-text">{isEs ? "Partnership" : "Guide"}</a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ export default function Nav({ locale = "en" }: NavProps) {
             href={guideHref}
             className="rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 md:px-4"
           >
-            {isEs ? "Descarga guía" : "Download guide"}
+            {isEs ? "Activar partnership" : "Download guide"}
           </a>
         </div>
       </div>

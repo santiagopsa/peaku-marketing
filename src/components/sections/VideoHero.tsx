@@ -83,18 +83,18 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
             </div>
             <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm text-firo-muted border border-firo-line">
               <span className="h-2 w-2 rounded-full bg-firo-blue" />
-              {isEs ? "PeakU para reclutadores" : "PeakU for recruiters"}
+              {isEs ? "Partnership PeakU para coworkings" : "PeakU for recruiters"}
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
               {isEs
-                ? "El problema no es encontrar buenos candidatos, es lograr respaldo para tu criterio."
+                ? "Activa el partnership con PeakU y entrégale a tu comunidad un beneficio de alto valor."
                 : "The problem is not finding strong candidates, it is getting support for your judgment."}
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-firo-muted md:text-lg">
               {isEs
-                ? "Si alguna vez sentiste que tu trabajo como reclutador se pierde cuando un líder descarta candidatos sin contexto, esto es para ti."
+                ? "Tu coworking habilita sin costo el acceso a publicar una vacante con servicio premium en PeakU. Nosotros les enviamos un kit y una landing del partnership para compartirlo fácilmente con su comunidad."
                 : "If your recruiting work gets dismissed when a hiring leader rejects candidates without context, this page is for you."}
             </p>
 
@@ -103,13 +103,13 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 href="#join"
                 className="rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
               >
-                {isEs ? "Descarga guía gratuita" : "Download free guide"}
+                {isEs ? "Activar partnership" : "Download free guide"}
               </a>
             </div>
 
             <p className="mt-3 text-xs text-firo-muted">
               {isEs
-                ? "Una herramienta práctica para respaldar tus decisiones de selección."
+                ? "Sin costo para el coworking. Alto valor para su comunidad."
                 : "A practical tool to support your hiring decisions."}
             </p>
           </div>
