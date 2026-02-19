@@ -53,7 +53,7 @@ export default function Nav({ locale = "en" }: NavProps) {
             href={guideHref}
             className="rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 md:px-4"
           >
-            {isEs ? "Descargar guía" : "Download guide"}
+            {isEs ? "Descarga guía" : "Download guide"}
           </a>
         </div>
       </div>
