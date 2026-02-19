@@ -5,7 +5,7 @@ import Container from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Sobre FIRO | Tesis y modelo operativo con leasing",
   description:
-    "Conoce que es FIRO, para quien es, que problema resuelve, como funciona el modelo con leasing y la vision de crecimiento en activos roboticos.",
+    "Conoce qué es FIRO, para quién es, qué problema resuelve, cómo funciona el modelo con leasing y la visión de crecimiento en activos robóticos.",
   alternates: {
     canonical: "/es/about",
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     locale: "es_ES",
     title: "Sobre FIRO | Tesis y modelo operativo con leasing",
     description:
-      "Resumen de FIRO para inversionistas y entusiastas: tesis de mercado, operacion y contacto.",
+      "Resumen de FIRO para inversionistas y entusiastas: tesis de mercado, operación y contacto.",
     url: "/es/about",
     images: [
       {
@@ -36,11 +36,11 @@ export default function AboutPageEs() {
           <div className="max-w-3xl">
             <div className="text-sm font-semibold text-firo-blue">Sobre FIRO</div>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">
-              Robotica humanoide estructurada para cashflow con leasing.
+              Robótica humanoide estructurada para cashflow con leasing.
             </h1>
             <p className="mt-5 text-white/75 md:text-lg">
               FIRO convierte robots humanoides en activos operativos con leasing:
-              despliegue claro, metricas transparentes y pagos por escenarios.
+              despliegue claro, métricas transparentes y pagos por escenarios.
             </p>
           </div>
         </Container>
@@ -50,17 +50,17 @@ export default function AboutPageEs() {
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-firo-line bg-firo-bg p-6">
-              <h2 className="text-2xl font-semibold tracking-tight">Para quien es FIRO</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">Para quién es FIRO</h2>
               <p className="mt-3 text-firo-muted">
-                Para inversionistas que buscan exposicion a cashflow en robotica, y para
-                entusiastas de tecnologia que quieren participar en esta transicion.
+                Para inversionistas que buscan exposición a cashflow en robótica, y para
+                entusiastas de tecnología que quieren participar en esta transición.
               </p>
             </div>
             <div className="rounded-2xl border border-firo-line bg-firo-bg p-6">
               <h2 className="text-2xl font-semibold tracking-tight">Problema que resolvemos</h2>
               <p className="mt-3 text-firo-muted">
-                La demanda existe, pero el financiamiento y la operacion estan fragmentados.
-                FIRO integra estructura de leasing, despliegue, operacion, control de riesgo y visibilidad de pagos.
+                La demanda existe, pero el financiamiento y la operación están fragmentados.
+                FIRO integra estructura de leasing, despliegue, operación, control de riesgo y visibilidad de pagos.
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function AboutPageEs() {
       <section id="thesis" className="bg-firo-bg py-20">
         <Container>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Como funciona (alto nivel)
+            Cómo funciona (alto nivel)
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <div className="rounded-2xl border border-firo-line bg-white p-6 shadow-soft">
@@ -82,7 +82,7 @@ export default function AboutPageEs() {
             <div className="rounded-2xl border border-firo-line bg-white p-6 shadow-soft">
               <div className="text-sm font-semibold text-firo-blue">2. Despliegue</div>
               <p className="mt-2 text-firo-muted">
-                FIRO coloca unidades en ambientes de demanda con operacion supervisada.
+                FIRO coloca unidades en ambientes de demanda con operación supervisada.
               </p>
             </div>
             <div className="rounded-2xl border border-firo-line bg-white p-6 shadow-soft">
@@ -102,12 +102,12 @@ export default function AboutPageEs() {
           </h2>
           <p className="mt-4 max-w-3xl text-firo-muted">
             Hoy estamos buscando inversionistas, idealmente vinculados a la industria de eventos
-            y capitalistas estrategicos para escalar despliegue comercial.
+            y capitalistas estratégicos para escalar el despliegue comercial.
           </p>
-          <h3 className="mt-10 text-2xl font-semibold tracking-tight">Tesis / vision</h3>
+          <h3 className="mt-10 text-2xl font-semibold tracking-tight">Tesis / visión</h3>
           <p className="mt-3 max-w-3xl text-firo-muted">
-            La robotica sera infraestructura operativa. Nuestra tesis es que el financiamiento
-            por leasing + operacion disciplinada construye cashflow escalable y transparente.
+            La robótica será infraestructura operativa. Nuestra tesis es que el financiamiento
+            por leasing + operación disciplinada construye cashflow escalable y transparente.
           </p>
         </Container>
       </section>
@@ -142,13 +142,13 @@ export default function AboutPageEs() {
                 type="email"
                 required
                 className="rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                placeholder="Correo electronico"
+                placeholder="Correo electrónico"
               />
               <input
                 name="phone"
                 required
                 className="rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                placeholder="Telefono"
+                placeholder="Teléfono"
               />
 
               <button

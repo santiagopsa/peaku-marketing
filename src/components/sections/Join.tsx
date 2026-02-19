@@ -12,16 +12,15 @@ export default function Join({ locale = "en" }: JoinProps) {
         <div className="rounded-3xl border border-firo-line bg-firo-bg p-8 shadow-soft md:p-10">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div>
-              <div className="text-sm font-semibold text-firo-blue">{isEs ? "Guia gratuita" : "Free guide"}</div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
                 {isEs
-                  ? "Guia gratuita: Como defender tus candidatos sin entrar en discusiones subjetivas"
+                  ? "Cómo defender tus candidatos sin entrar en discusiones subjetivas"
                   : "Free guide: How to defend your candidates without subjective debates"}
               </h2>
               <p className="mt-3 text-firo-muted">
                 {isEs
-                  ? "Un framework practico usado por reclutadores para presentar candidatos con claridad, datos y argumentos que los lideres si entienden."
-                  : "A practical framework recruiters use to present candidates with clarity, evidence, and arguments leaders can understand."}
+                  ? "Un framework práctico para presentar candidatos con claridad, datos y argumentos que los líderes sí entienden. Te enviamos la guía directamente por WhatsApp."
+                  : "A practical framework recruiters use to present candidates with clarity, evidence, and arguments leaders can understand. We will send the guide directly to your WhatsApp."}
               </p>
             </div>
 
@@ -49,26 +48,12 @@ export default function Join({ locale = "en" }: JoinProps) {
                 </div>
 
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="email">
-                    {isEs ? "Correo electronico" : "Email"}
+                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="whatsapp">
+                    {isEs ? "Número de WhatsApp" : "WhatsApp number"}
                   </label>
                   <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                    placeholder={isEs ? "tu@email.com" : "you@email.com"}
-                  />
-                </div>
-
-                <div>
-                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="phone">
-                    {isEs ? "Telefono" : "Phone"}
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
+                    id="whatsapp"
+                    name="whatsapp"
                     required
                     className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
                     placeholder={isEs ? "+57 300 000 0000" : "+1 (555) 000-0000"}
@@ -79,7 +64,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                   type="submit"
                   className="w-full rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
                 >
-                  {isEs ? "Descargar ahora" : "Download now"}
+                  {isEs ? "Recibir guía por WhatsApp" : "Send guide via WhatsApp"}
                 </button>
               </form>
             </div>
@@ -87,8 +72,8 @@ export default function Join({ locale = "en" }: JoinProps) {
 
           <div className="mt-6 text-xs text-firo-muted">
             {isEs
-              ? "Sin spam. Creado por personas que tambien han estado en tu lugar."
-              : "No spam. Built by people who have been in your position."}
+              ? "Sin spam. Solo usamos tu WhatsApp para enviarte la guía."
+              : "No spam. We only use your WhatsApp to send the guide."}
           </div>
         </div>
       </Container>

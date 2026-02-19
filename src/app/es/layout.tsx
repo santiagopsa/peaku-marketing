@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FIRO | Activos Roboticos, Retorno Real",
+  title: "FIRO | Activos Robóticos, Retorno Real",
   description:
-    "FIRO convierte robots humanoides en activos productivos. Invierte en una unidad, FIRO opera el despliegue y tu sigues utilizacion, uptime y pagos.",
+    "FIRO convierte robots humanoides en activos productivos. Invierte en una unidad, FIRO opera el despliegue y tú sigues utilización, uptime y pagos.",
   alternates: {
     canonical: "/es",
     languages: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   openGraph: {
     locale: "es_ES",
     url: "/es",
-    title: "FIRO | Activos Roboticos, Retorno Real",
+    title: "FIRO | Activos Robóticos, Retorno Real",
     description:
-      "Invierte en activos roboticos con operacion gestionada y visibilidad de pagos.",
+      "Invierte en activos robóticos con operación gestionada y visibilidad de pagos.",
   },
 };
 

@@ -33,27 +33,27 @@ const levels = [
 const levelsEs = [
   {
     level: "Paso 1",
-    title: "Senal",
-    earns: "Haces el trabajo de diagnostico mas complejo",
+    title: "Señal",
+    earns: "Haces el trabajo de diagnóstico más complejo",
     does: "Filtro, entrevistas y notas estructuradas",
   },
   {
     level: "Paso 2",
-    title: "Recomendacion",
+    title: "Recomendación",
     earns: "Presentas candidatos con criterio claro",
-    does: "Evidencia tecnica y humana, no opiniones sueltas",
+    does: "Evidencia técnica y humana, no opiniones sueltas",
   },
   {
     level: "Paso 3",
     title: "Rechazo",
-    earns: "La decision llega sin estructura",
-    does: "\"No me convencio\" sin criterios compartidos",
+    earns: "La decisión llega sin estructura",
+    does: "\"No me convenció\" sin criterios compartidos",
   },
   {
     level: "Paso 4",
     title: "Reproceso",
-    earns: "Se reinicia la seleccion y cae la confianza",
-    does: "Se pierde tiempo para reclutador, lider y candidato",
+    earns: "Se reinicia la selección y cae la confianza",
+    does: "Se pierde tiempo para reclutador, líder y candidato",
   },
 ];
 
@@ -94,13 +94,12 @@ export default function Levels({ locale = "en" }: LevelsProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="md:sticky md:top-28">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Reframe" : "Reframe"}</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               {isEs ? "No es un problema de talento. Es un problema de confianza." : "This is not a talent problem. It is a trust problem."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratacion se sostengan internamente."
+                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratación se sostengan internamente."
                 : "Teams rarely question the process itself. They question the recruiter’s judgment. PeakU adds structured evidence to make hiring decisions defensible."}
             </p>
           </div>
@@ -108,7 +107,7 @@ export default function Levels({ locale = "en" }: LevelsProps) {
           <div className="grid gap-4">
             {levelItems.map((l) => (
               <div
-                key={l.title}
+                key={l.level}
                 data-level
                 className="group rounded-3xl border border-firo-line bg-firo-bg p-6 shadow-soft transition hover:-translate-y-1"
               >
@@ -116,10 +115,8 @@ export default function Levels({ locale = "en" }: LevelsProps) {
                   <div className="text-xs font-semibold text-firo-muted">{l.level}</div>
                   <div className="h-2 w-2 rounded-full bg-firo-blue opacity-70 group-hover:opacity-100" />
                 </div>
-                <div className="mt-2 text-xl font-semibold tracking-tight">{l.title}</div>
-
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <Stat label={isEs ? "Que ocurre" : "What happens"} value={l.earns} />
+                  <Stat label={isEs ? "Qué ocurre" : "What happens"} value={l.earns} />
                   <Stat label={isEs ? "Impacto" : "Impact"} value={l.does} />
                 </div>
               </div>

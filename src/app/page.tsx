@@ -8,7 +8,7 @@ import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "PeakU | Guia para reclutadores que necesitan respaldo interno",
+  title: "PeakU | Guía para reclutadores que necesitan respaldo interno",
   description:
     "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "PeakU | Reclutamiento con evidencia y confianza interna",
     description:
-      "Descarga una guia practica para presentar candidatos con claridad, datos y criterios que los lideres entienden.",
+      "Descarga una guía práctica para presentar candidatos con claridad, datos y criterios que los líderes entienden.",
     url: "/",
     images: [
       {

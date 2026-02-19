@@ -8,7 +8,7 @@ import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "PeakU | Guia para reclutadores que necesitan respaldo interno",
+  title: "PeakU | Guía para reclutadores que necesitan respaldo interno",
   description:
     "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
   alternates: {
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     locale: "es_ES",
     title: "PeakU | Reclutamiento con evidencia y confianza interna",
     description:
-      "Descarga una guia practica para presentar candidatos con claridad, datos y criterios que los lideres entienden.",
+      "Descarga una guía práctica para presentar candidatos con claridad, datos y criterios que los líderes entienden.",
     url: "/es",
     images: [
       {
         url: "/assets/hero/dashboard.png",
         width: 1200,
         height: 800,
-        alt: "Dashboard PeakU para respaldo de decisiones de seleccion",
+        alt: "Dashboard de PeakU para respaldar decisiones de selección",
       },
     ],
   },

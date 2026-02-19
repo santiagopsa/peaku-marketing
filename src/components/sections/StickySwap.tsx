@@ -11,9 +11,9 @@ const cards = [
   { title: "Your work becomes visible", desc: "The depth of your recruiting process is no longer hidden behind opinions." },
 ];
 const cardsEs = [
-  { title: "Decisiones respaldadas con evidencia", desc: "Cada recomendacion se presenta con criterios claros y senales objetivas." },
-  { title: "Menos reprocesos de seleccion", desc: "Una estructura compartida evita reinicios, demoras y discusiones circulares." },
-  { title: "Mayor confianza del lider contratante", desc: "El lider entiende por que el candidato encaja antes de decidir por intuicion." },
+  { title: "Decisiones respaldadas con evidencia", desc: "Cada recomendación se presenta con criterios claros y señales objetivas." },
+  { title: "Menos reprocesos de selección", desc: "Una estructura compartida evita reinicios, demoras y discusiones circulares." },
+  { title: "Mayor confianza del líder contratante", desc: "El líder entiende por qué el candidato encaja antes de decidir por intuición." },
   { title: "Tu trabajo se vuelve visible", desc: "El valor de tu proceso deja de perderse en opiniones aisladas." },
 ];
 
@@ -58,13 +58,12 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2">
           <div className="md:sticky md:top-24 md:h-fit">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Resultados" : "Outcomes"}</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               {isEs ? "Lo que cambia cuando hay evidencia compartida" : "What changes when evidence is shared"}
             </h2>
             <p className="mt-4 max-w-lg text-firo-muted">
               {isEs
-                ? "No se trata de convencer con mas opinion. Se trata de mostrar mejor el trabajo que ya haces."
+                ? "No se trata de convencer con más opinión. Se trata de mostrar mejor el trabajo que ya haces."
                 : "It is not about arguing harder. It is about making your process visible and credible."}
             </p>
           </div>
@@ -76,8 +75,7 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
                 data-swap-item
                 className="rounded-2xl border border-firo-line bg-white p-6 shadow-soft"
               >
-                <div className="text-lg font-semibold">{c.title}</div>
-                <div className="mt-2 text-firo-muted">{c.desc}</div>
+                <div className="text-firo-muted">{c.desc}</div>
               </div>
             ))}
           </div>

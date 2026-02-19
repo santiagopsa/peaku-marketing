@@ -14,96 +14,96 @@ export const metadata: Metadata = {
     locale: "es_ES",
     title: "FIRO Inversionistas | Tesis de leasing, unit economics, riesgos y FAQ",
     description:
-      "Modelo de inversion FIRO con enfoque leasing, supuestos transparentes, riesgos y formulario de contacto.",
+      "Modelo de inversión FIRO con enfoque leasing, supuestos transparentes, riesgos y formulario de contacto.",
     url: "/es/investors",
     images: [
       {
         url: "/assets/hero/dashboard.png",
         width: 1200,
         height: 800,
-        alt: "Resumen de inversion FIRO",
+        alt: "Resumen de inversión FIRO",
       },
     ],
   },
 };
 
 const thesisPoints = [
-  "La robotica humanoide ya salio de la fase demo y entro en despliegues productivos.",
-  "El leasing reduce la exposicion directa a la depreciacion acelerada del hardware.",
+  "La robótica humanoide ya salió de la fase demo y entró en despliegues productivos.",
+  "El leasing reduce la exposición directa a la depreciación acelerada del hardware.",
   "FIRO opera de punta a punta para que el inversionista se enfoque en financiar y cobrar neto mensual.",
 ];
 
 const economics = [
   { label: "Leasing mensual (base)", value: "$1,500" },
   { label: "Escenario base (neto inversionista)", value: "$1,414 / mes" },
-  { label: "Plazo minimo de contrato", value: "24 meses" },
+  { label: "Plazo mínimo de contrato", value: "24 meses" },
   { label: "Ventana de permanencia dura", value: "12 meses" },
 ];
 
 const risks = [
   {
     risk: "Demanda comercial insuficiente",
-    mitigation: "Pipeline por vertical, acuerdos con partners y foco inicial en casos de alta rotacion.",
+    mitigation: "Pipeline por vertical, acuerdos con partners y foco inicial en casos de alta rotación.",
   },
   {
-    risk: "Riesgo de obligacion de leasing",
-    mitigation: "Exigimos contrato minimo de 24 meses, monitoreamos cobertura de leasing mensualmente y priorizamos contratos que sostengan umbrales base.",
+    risk: "Riesgo de obligación de leasing",
+    mitigation: "Exigimos contrato mínimo de 24 meses, monitoreamos cobertura de leasing mensualmente y priorizamos contratos que sostengan umbrales base.",
   },
   {
     risk: "Variabilidad operativa",
-    mitigation: "Operador dedicado por dia activo, SOPs y mantenimiento preventivo.",
+    mitigation: "Operador dedicado por día activo, SOPs y mantenimiento preventivo.",
   },
   {
-    risk: "Riesgo tecnologico",
-    mitigation: "Monitoreo remoto, telemetria y planes de reemplazo/backup por unidad.",
+    risk: "Riesgo tecnológico",
+    mitigation: "Monitoreo remoto, telemetría y planes de reemplazo/backup por unidad.",
   },
   {
-    risk: "Cumplimiento y reputacion",
-    mitigation: "Geofencing, operacion supervisada, politicas de privacidad y protocolos de seguridad.",
+    risk: "Cumplimiento y reputación",
+    mitigation: "Geofencing, operación supervisada, políticas de privacidad y protocolos de seguridad.",
   },
 ];
 
 const competitors = [
   {
     model: "Renta puntual de robot",
-    strengths: "Rapida para activaciones aisladas",
+    strengths: "Rápida para activaciones aisladas",
     limits: "Baja continuidad de datos y poca visibilidad para inversionista",
   },
   {
     model: "Integrador tradicional",
-    strengths: "Experiencia tecnica y customizacion",
+    strengths: "Experiencia técnica y customización",
     limits: "Suele priorizar proyecto, no rendimiento recurrente de activo",
   },
   {
-    model: "FIRO (leasing + operacion)",
-    strengths: "Modelo leasing + operacion orientado a cashflow con tracking operativo y de pagos",
+    model: "FIRO (leasing + operación)",
+    strengths: "Modelo leasing + operación orientado a cashflow con tracking operativo y de pagos",
     limits: "Requiere disciplina operativa para mantener cobertura de leasing y consistencia de payouts",
   },
 ];
 
 const faqs = [
   {
-    q: "Como se calcula el pago al inversionista?",
-    a: "Partimos del ingreso bruto mensual, restamos operador y costos operativos, luego restamos el leasing mensual. Sobre ese neto distribuible aplicamos el porcentaje del inversionista.",
+    q: "¿Cómo se calcula el pago al inversionista?",
+    a: "Partimos del ingreso bruto mensual, restamos operador y costos operativos, y luego restamos el leasing mensual. Sobre ese neto distribuible aplicamos el porcentaje del inversionista.",
   },
   {
-    q: "Por que leasing y no compra directa del robot?",
-    a: "El leasing reduce exposicion a depreciacion de corto plazo y mantiene la opcion de capturar flujo operativo con menor riesgo estructural.",
+    q: "¿Por qué leasing y no compra directa del robot?",
+    a: "El leasing reduce exposición a depreciación de corto plazo y mantiene la opción de capturar flujo operativo con menor riesgo estructural.",
   },
   {
-    q: "Que pasa si baja la utilizacion?",
+    q: "¿Qué pasa si baja la utilización?",
     a: "El payout baja porque cae el neto operativo y la cobertura del leasing. Por eso mostramos escenarios conservador/base/optimista y no promesas fijas.",
   },
   {
-    q: "Existe plazo minimo para el inversionista?",
-    a: "Si. Exigimos contrato minimo de 24 meses con permanencia dura de 12 meses para sostener obligaciones de leasing y predictibilidad operativa.",
+    q: "¿Existe plazo mínimo para el inversionista?",
+    a: "Sí. Exigimos contrato mínimo de 24 meses con permanencia dura de 12 meses para sostener obligaciones de leasing y predictibilidad operativa.",
   },
   {
-    q: "Quien ejecuta la operacion diaria?",
+    q: "¿Quién ejecuta la operación diaria?",
     a: "FIRO gestiona despliegue, operador, agenda, mantenimiento y control operativo en cada jornada activa.",
   },
   {
-    q: "Este retorno es garantizado?",
+    q: "¿Este retorno es garantizado?",
     a: "No. Son proyecciones por escenarios con supuestos visibles.",
   },
 ];
@@ -129,10 +129,10 @@ export default function InvestorsPageEs() {
           <div className="max-w-3xl">
             <div className="text-sm font-semibold text-firo-blue">Inversionistas</div>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">
-              Resumen de inversion FIRO.
+              Resumen de inversión FIRO.
             </h1>
             <p className="mt-5 text-white/75 md:text-lg">
-              Pagina de referencia para evaluar la tesis leasing-first de FIRO, unit economics, riesgos, mapa competitivo
+              Página de referencia para evaluar la tesis leasing-first de FIRO, unit economics, riesgos, mapa competitivo
               y contacto directo con el equipo.
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function InvestorsPageEs() {
       <section id="thesis" className="bg-white py-20">
         <Container>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Tesis: por que este mercado ahora
+            Tesis: por qué este mercado ahora
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             {thesisPoints.map((point) => (
@@ -160,7 +160,7 @@ export default function InvestorsPageEs() {
             Modelos y unit economics
           </h2>
           <p className="mt-4 text-firo-muted">
-            Escenario base donde el inversionista financia leasing mensual y FIRO gestiona operacion.
+            Escenario base donde el inversionista financia leasing mensual y FIRO gestiona operación.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {economics.map((item) => (
@@ -171,7 +171,7 @@ export default function InvestorsPageEs() {
             ))}
           </div>
           <div className="mt-4 text-sm text-firo-muted">
-            Nota: proyecciones por escenarios, no garantias.
+            Nota: proyecciones por escenarios, no garantías.
           </div>
         </Container>
       </section>
@@ -198,7 +198,7 @@ export default function InvestorsPageEs() {
             Mapa competitivo
           </h2>
           <p className="mt-4 text-firo-muted">
-            Comparacion neutral de modelos actuales en el mercado.
+            Comparación neutral de modelos actuales en el mercado.
           </p>
           <div className="mt-8 overflow-x-auto rounded-2xl border border-firo-line bg-white">
             <table className="w-full min-w-[720px] text-left">
@@ -206,7 +206,7 @@ export default function InvestorsPageEs() {
                 <tr>
                   <th className="px-5 py-4 text-sm font-semibold">Modelo</th>
                   <th className="px-5 py-4 text-sm font-semibold">Fortaleza</th>
-                  <th className="px-5 py-4 text-sm font-semibold">Limitacion</th>
+                  <th className="px-5 py-4 text-sm font-semibold">Limitación</th>
                 </tr>
               </thead>
               <tbody>
@@ -268,25 +268,25 @@ export default function InvestorsPageEs() {
                 type="email"
                 required
                 className="rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                placeholder="Correo electronico"
+                placeholder="Correo electrónico"
               />
               <input
                 name="phone"
                 required
                 className="rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                placeholder="Telefono"
+                placeholder="Teléfono"
               />
 
               <button
                 type="submit"
                 className="md:col-span-3 rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
               >
-                Solicitar informacion para inversionistas
+                Solicitar información para inversionistas
               </button>
             </form>
 
             <div className="mt-4 text-xs text-firo-muted">
-              Proyecciones basadas en escenarios. No constituyen garantia de rendimiento.
+              Proyecciones basadas en escenarios. No constituyen garantía de rendimiento.
             </div>
           </div>
         </Container>

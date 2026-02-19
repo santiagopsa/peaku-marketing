@@ -87,26 +87,14 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
-              {isEs ? (
-                <>
-                  El problema no es encontrar buenos candidatos.
-                  <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(37,99,255,.45)]">
-                    {" "}Es lograr que confien en tu criterio.
-                  </span>
-                </>
-              ) : (
-                <>
-                  The problem is not finding strong candidates.
-                  <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(37,99,255,.45)]">
-                    {" "}It is getting others to trust your judgment.
-                  </span>
-                </>
-              )}
+              {isEs
+                ? "El problema no es encontrar buenos candidatos, es lograr respaldo para tu criterio."
+                : "The problem is not finding strong candidates, it is getting support for your judgment."}
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-firo-muted md:text-lg">
               {isEs
-                ? "Si alguna vez sentiste que tu trabajo como reclutador se pierde cuando un lider descarta candidatos sin contexto, esto es para ti."
+                ? "Si alguna vez sentiste que tu trabajo como reclutador se pierde cuando un líder descarta candidatos sin contexto, esto es para ti."
                 : "If your recruiting work gets dismissed when a hiring leader rejects candidates without context, this page is for you."}
             </p>
 
@@ -115,13 +103,13 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 href="#join"
                 className="rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
               >
-                {isEs ? "Descargar guia gratuita" : "Download free guide"}
+                {isEs ? "Descargar guía gratuita" : "Download free guide"}
               </a>
             </div>
 
             <p className="mt-3 text-xs text-firo-muted">
               {isEs
-                ? "Una herramienta practica para respaldar tus decisiones de seleccion."
+                ? "Una herramienta práctica para respaldar tus decisiones de selección."
                 : "A practical tool to support your hiring decisions."}
             </p>
           </div>

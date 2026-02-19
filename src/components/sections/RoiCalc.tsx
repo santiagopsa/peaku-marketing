@@ -47,15 +47,14 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Cierre" : "Final step"}</div>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               {isEs
-                ? "Cuando cambia la forma de presentar candidatos, cambia la conversacion."
+                ? "Cuando cambia la forma de presentar candidatos, cambia la conversación."
                 : "When candidate presentation changes, the conversation changes."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Usa este esquema para convertir una recomendacion en una conversacion con contexto, evidencia y criterios compartidos."
+                ? "Usa este esquema para convertir una recomendación en una conversación con contexto, evidencia y criterios compartidos."
                 : "Use this structure to turn a recommendation into a conversation with context, evidence, and shared criteria."}
             </p>
 
@@ -70,7 +69,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
                 onChange={setOperatorDay}
               />
               <Slider
-                label={isEs ? "Fraccion subjetiva de la decision" : "Subjective share in decision"}
+                label={isEs ? "Fracción subjetiva de la decisión" : "Subjective share in decision"}
                 value={Math.round(otherOps * 100)}
                 min={5}
                 max={30}
@@ -78,7 +77,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
                 suffix="%"
               />
               <Slider
-                label={isEs ? "Alineacion con el lider contratante" : "Hiring leader alignment"}
+                label={isEs ? "Alineación con el líder contratante" : "Hiring leader alignment"}
                 value={leaseMonthly}
                 min={600}
                 max={4000}
@@ -121,7 +120,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
             </div>
             <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Alineacion: $${Math.round(leaseMonthly).toLocaleString()} • Diferencial: $${Math.round(result.distributable).toLocaleString()}`
+                ? `Alineación: $${Math.round(leaseMonthly).toLocaleString()} • Diferencial: $${Math.round(result.distributable).toLocaleString()}`
                 : `Alignment: $${Math.round(leaseMonthly).toLocaleString()} • Delta: $${Math.round(result.distributable).toLocaleString()}`}
             </div>
             <div className="mt-1 text-firo-muted">
@@ -136,7 +135,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
             </div>
             <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Horizonte de adopcion: ${contractMonths} semanas • Ajuste inicial: ${hardCommitMonths} semanas`
+                ? `Horizonte de adopción: ${contractMonths} semanas • Ajuste inicial: ${hardCommitMonths} semanas`
                 : `Adoption horizon: ${contractMonths} weeks • Initial adjustment: ${hardCommitMonths} weeks`}
             </div>
             <div className="mt-1 text-firo-muted">
@@ -157,15 +156,15 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
               />
               <Info
                 title={isEs ? "Reportes claros" : "Clear reports"}
-                desc={isEs ? "Resumen ejecutable para lideres que necesitan decidir rapido." : "Actionable summaries for leaders who need to decide quickly."}
+                desc={isEs ? "Resumen accionable para líderes que necesitan decidir rápido." : "Actionable summaries for leaders who need to decide quickly."}
               />
               <Info
                 title={isEs ? "Trazabilidad" : "Traceability"}
-                desc={isEs ? "Cada decision queda respaldada por criterios visibles." : "Each decision is backed by visible criteria."}
+                desc={isEs ? "Cada decisión queda respaldada por criterios visibles." : "Each decision is backed by visible criteria."}
               />
               <Info
                 title={isEs ? "Confianza interna" : "Internal trust"}
-                desc={isEs ? "Menos friccion entre recruiting y equipos contratantes." : "Less friction between recruiting and hiring teams."}
+                desc={isEs ? "Menos fricción entre recruiting y equipos contratantes." : "Less friction between recruiting and hiring teams."}
               />
             </div>
 
@@ -174,7 +173,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
               href="#join"
               className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold hover:opacity-95"
             >
-              {isEs ? "Quiero la guia" : "I want the guide"}
+              {isEs ? "Quiero la guía" : "I want the guide"}
             </a>
           </div>
         </div>
