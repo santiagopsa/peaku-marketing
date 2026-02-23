@@ -49,12 +49,30 @@ export default function Lore({ locale = "en" }: LoreProps) {
               </h2>
 
               <ul data-reveal className="mt-8 space-y-3 text-firo-muted">
-                <li>Obtener la información real que necesitan los tomadores de decisión.</li>
-                <li>Definir el éxito del rol antes de empezar a buscar.</li>
-                <li>Diseñar entrevistas que generen evidencia (no opiniones).</li>
-                <li>Presentar candidatos de forma que reduzca la incertidumbre.</li>
-                <li>Responder profesionalmente al “no me convenció”.</li>
-                <li>Convertirte en un asesor, no solo en quien coordina el proceso.</li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Obtener la información real que necesitan los tomadores de decisión.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Definir el éxito del rol antes de empezar a buscar.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Diseñar entrevistas que generen evidencia (no opiniones).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Presentar candidatos de forma que reduzca la incertidumbre.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Responder profesionalmente al “no me convenció”.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-firo-blue">✓</span>
+                  <span>Convertirte en un asesor, no solo en quien coordina el proceso.</span>
+                </li>
               </ul>
 
               <div data-reveal className="mt-10 rounded-2xl border border-firo-line bg-white p-6">
@@ -63,20 +81,23 @@ export default function Lore({ locale = "en" }: LoreProps) {
                 </h3>
                 <p className="mt-4 text-firo-muted">Incluye:</p>
                 <ul className="mt-3 space-y-2 text-firo-muted">
-                  <li>Plantilla de kickoff lista para usar.</li>
-                  <li>Estructura de entrevista paso a paso.</li>
-                  <li>Modelo de informe para presentar finalistas.</li>
-                  <li>Checklist operativo para cada proceso.</li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 text-firo-blue">✓</span>
+                    <span>Plantilla de kickoff lista para usar.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 text-firo-blue">✓</span>
+                    <span>Estructura de entrevista paso a paso.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 text-firo-blue">✓</span>
+                    <span>Modelo de informe para presentar finalistas.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 text-firo-blue">✓</span>
+                    <span>Checklist operativo para cada proceso.</span>
+                  </li>
                 </ul>
-              </div>
-
-              <div data-reveal className="mt-6 grid gap-4 md:grid-cols-2">
-                <div className="rounded-2xl border border-dashed border-firo-line bg-white p-6 text-sm text-firo-muted">
-                  Screenshot real del documento 1
-                </div>
-                <div className="rounded-2xl border border-dashed border-firo-line bg-white p-6 text-sm text-firo-muted">
-                  Screenshot real del documento 2
-                </div>
               </div>
 
               <div data-reveal className="mt-10 rounded-2xl border border-firo-line bg-white p-6">

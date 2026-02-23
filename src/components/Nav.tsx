@@ -20,9 +20,9 @@ export default function Nav({ locale = "en" }: NavProps) {
       : `/es${pathname}`;
   const homePath = isEs ? "/es" : "/";
   const homeHref = isHomePath ? "#top" : homePath;
-  const anchorHref = (id: "quote") =>
+  const anchorHref = (id: "join" | "quote") =>
     isHomePath ? `#${id}` : `${homePath}#${id}`;
-  const guideHref = anchorHref("quote");
+  const guideHref = anchorHref("join");
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 border-b border-firo-line bg-white/85 text-firo-text backdrop-blur-xl">
