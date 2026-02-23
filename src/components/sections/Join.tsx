@@ -65,7 +65,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                   type="submit"
                   className="w-full rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
                 >
-                  {isEs ? "Recibir guía por WhatsApp" : "Send guide via WhatsApp"}
+                  {isEs ? "👉 Quiero recibir la guía por WhatsApp" : "Send guide via WhatsApp"}
                 </button>
               </form>
             </div>
@@ -73,7 +73,7 @@ export default function Join({ locale = "en" }: JoinProps) {
 
           <div className="mt-6 text-xs text-firo-muted">
             {isEs
-              ? "Sin spam. Solo usamos tu WhatsApp para enviarte la guía."
+              ? "Solo recibirás la guía. Sin spam."
               : "No spam. We only use your WhatsApp to send the guide."}
           </div>
         </div>

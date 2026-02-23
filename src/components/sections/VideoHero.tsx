@@ -88,13 +88,13 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
               {isEs
-                ? "El problema no es encontrar buenos candidatos, es lograr respaldo para tu criterio."
+                ? "Si alguna vez escuchaste \"sigamos viendo más perfiles\", esta guía es para ti."
                 : "The problem is not finding strong candidates, it is getting support for your judgment."}
             </h1>
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-firo-muted md:text-lg">
               {isEs
-                ? "Si alguna vez sentiste que tu trabajo como reclutador se pierde cuando un líder descarta candidatos sin contexto, esto es para ti."
+                ? "Aprende cómo alinear criterios, estructurar entrevistas y presentar candidatos para que las decisiones avancen con más claridad."
                 : "If your recruiting work gets dismissed when a hiring leader rejects candidates without context, this page is for you."}
             </p>
 
@@ -103,7 +103,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 href="#join"
                 className="rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
               >
-                {isEs ? "Descarga guía gratuita" : "Download free guide"}
+                {isEs ? "Recíbela por WhatsApp" : "Download free guide"}
               </a>
             </div>
 

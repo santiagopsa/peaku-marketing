@@ -95,13 +95,20 @@ export default function Levels({ locale = "en" }: LevelsProps) {
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="md:sticky md:top-28">
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "No es un problema de talento. Es un problema de confianza." : "This is not a talent problem. It is a trust problem."}
+              {isEs
+                ? "El mayor cambio ocurre cuando dejas de perseguir aprobaciones."
+                : "This is not a talent problem. It is a trust problem."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratación se sostengan internamente."
+                ? "El reclutamiento cambia cuando pasas de enviar perfiles a ayudar a otros a decidir con confianza."
                 : "Teams rarely question the process itself. They question the recruiter’s judgment. PeakU adds structured evidence to make hiring decisions defensible."}
             </p>
+            {isEs ? (
+              <p className="mt-3 text-firo-muted">
+                Ese es el momento donde tu rol deja de ser operativo. Y empieza a ser estratégico.
+              </p>
+            ) : null}
           </div>
 
           <div className="grid gap-4">
