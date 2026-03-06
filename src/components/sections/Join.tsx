@@ -1,5 +1,7 @@
 import Container from "../ui/Container";
-import { SITE_URL } from "@/lib/site";
+
+const FORM_REDIRECT_BASE_URL =
+  "https://main.d62zunsnnqb4y.amplifyapp.com";
 
 type JoinProps = {
   locale?: "en" | "es";
@@ -8,7 +10,7 @@ type JoinProps = {
 export default function Join({ locale = "en" }: JoinProps) {
   const isEs = locale === "es";
   const thankYouPath = isEs ? "/es/thanks" : "/thanks";
-  const thankYouUrl = `${SITE_URL}${thankYouPath}`;
+  const thankYouUrl = `${FORM_REDIRECT_BASE_URL}${thankYouPath}`;
   return (
     <section id="join" className="bg-firo-bg py-24">
       <Container>
