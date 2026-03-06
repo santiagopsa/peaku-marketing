@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { SITE_URL } from "@/lib/site";
 
 type JoinProps = {
   locale?: "en" | "es";
@@ -6,6 +7,8 @@ type JoinProps = {
 
 export default function Join({ locale = "en" }: JoinProps) {
   const isEs = locale === "es";
+  const thankYouPath = isEs ? "/es/thanks" : "/thanks";
+  const thankYouUrl = `${SITE_URL}${thankYouPath}`;
   return (
     <section id="join" className="bg-firo-bg py-24">
       <Container>
@@ -34,6 +37,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_cc" value="santiago@peaku.co" />
+                <input type="hidden" name="_next" value={thankYouUrl} />
 
                 <div>
                   <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="name">
