@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import GoogleAdsConversion from "@/components/GoogleAdsConversion";
 
 export const metadata: Metadata = {
   title: "Gracias | PeakU",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function ThanksPageEs() {
   return (
     <main className="min-h-screen bg-firo-bg px-5 py-24 text-firo-text md:px-8">
+      <GoogleAdsConversion />
       <div className="mx-auto w-full max-w-3xl rounded-3xl border border-firo-line bg-white p-8 shadow-soft md:p-10">
         <p className="text-sm font-semibold text-firo-blue">Solicitud enviada</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
