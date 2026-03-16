@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import Container from "../ui/Container";
 
 const FORM_REDIRECT_BASE_URL =
@@ -7,10 +8,30 @@ type JoinProps = {
   locale?: "en" | "es";
 };
 
+const phoneIsValid = (value: string) => {
+  const digitsOnly = value.replace(/\D/g, "");
+  return digitsOnly.length >= 10;
+};
+
+const getPopupMessage = (isEs: boolean) =>
+  isEs
+    ? "La guía se envía por WhatsApp. Si el número no es correcto, no te va a llegar. Además, te regalamos dentro de la guia un GPT para que hagas este proceso mejor. No vamos a enviarte SPAM."
+    : "The guide is sent through WhatsApp. If your number is wrong, you won\'t receive it. We also include a GPT inside the guide to make this process better. We won\'t send you SPAM.";
+
 export default function Join({ locale = "en" }: JoinProps) {
   const isEs = locale === "es";
   const thankYouPath = isEs ? "/es/thanks" : "/thanks";
   const thankYouUrl = `${FORM_REDIRECT_BASE_URL}${thankYouPath}`;
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const form = event.currentTarget;
+    const phoneValue = (form.elements.namedItem("whatsapp") as HTMLInputElement)?.value || "";
+    if (!phoneIsValid(phoneValue)) {
+      event.preventDefault();
+      window.alert(getPopupMessage(isEs));
+      return;
+    }
+  };
+
   return (
     <section id="join" className="bg-firo-bg py-24">
       <Container>
@@ -33,6 +54,7 @@ export default function Join({ locale = "en" }: JoinProps) {
               <form
                 action="https://formsubmit.co/luisa@peaku.co"
                 method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 <input type="hidden" name="_subject" value="PeakU Guia gratuita para reclutadores" />
@@ -61,7 +83,11 @@ export default function Join({ locale = "en" }: JoinProps) {
                   <input
                     id="whatsapp"
                     name="whatsapp"
+                    type="tel"
+                    inputMode="tel"
                     required
+                    pattern="^\+?[0-9\s\-()]{10,}$"
+                    title={isEs ? "Ingresa un número válido con al menos 10 dígitos" : "Enter a valid number with at least 10 digits"}
                     className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
                     placeholder={isEs ? "+57 300 000 0000" : "+1 (555) 000-0000"}
                   />
