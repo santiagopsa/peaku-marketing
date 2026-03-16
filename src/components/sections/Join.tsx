@@ -26,12 +26,22 @@ export default function Join({ locale = "en" }: JoinProps) {
   const thankYouUrl = `${FORM_REDIRECT_BASE_URL}${thankYouPath}`;
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     const form = event.currentTarget;
+    event.preventDefault();
+
+    const nameValue = (form.elements.namedItem("name") as HTMLInputElement)?.value || "";
     const phoneValue = (form.elements.namedItem("whatsapp") as HTMLInputElement)?.value || "";
+
+    if (!nameValue.trim()) {
+      window.alert(isEs ? "Por favor ingresa tu nombre." : "Please enter your name.");
+      return;
+    }
+
     if (!phoneIsValid(phoneValue)) {
-      event.preventDefault();
       window.alert(getPopupMessage(isEs));
       return;
     }
+
+    form.submit();
   };
 
   return (
@@ -56,6 +66,7 @@ export default function Join({ locale = "en" }: JoinProps) {
               <form
                 action="https://formsubmit.co/luisa@peaku.co"
                 method="POST"
+                noValidate
                 onSubmit={handleSubmit}
                 className="space-y-4"
               >
