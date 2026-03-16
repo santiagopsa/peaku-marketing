@@ -14,7 +14,7 @@ export default function ThanksPageEs() {
       <div className="mx-auto w-full max-w-3xl rounded-3xl border border-firo-line bg-white p-8 shadow-soft md:p-10">
         <p className="text-sm font-semibold text-firo-blue">Solicitud enviada</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Gracias. Te enviaremos la guia por WhatsApp.
+          Gracias. Te enviaremos la guía al número de WhatsApp que nos compartiste.
         </h1>
         <p className="mt-4 text-firo-muted">
           Recibimos tus datos correctamente. Si quieres, puedes volver al inicio.

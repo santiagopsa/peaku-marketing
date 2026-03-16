@@ -14,7 +14,7 @@ export default function ThanksPage() {
       <div className="mx-auto w-full max-w-3xl rounded-3xl border border-firo-line bg-white p-8 shadow-soft md:p-10">
         <p className="text-sm font-semibold text-firo-blue">Request sent</p>
         <h1 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Thank you! We will send your guide via WhatsApp.
+          Thank you! We will send the guide to the WhatsApp number you shared.
         </h1>
         <p className="mt-4 text-firo-muted">
           Your information was received successfully. You can return to the home page if needed.
