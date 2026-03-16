@@ -24,9 +24,9 @@ export default function Join({ locale = "en" }: JoinProps) {
   const isEs = locale === "es";
   const thankYouPath = isEs ? "/es/thanks" : "/thanks";
   const thankYouUrl = `${FORM_REDIRECT_BASE_URL}${thankYouPath}`;
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    const form = event.currentTarget;
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
 
     const nameValue = (form.elements.namedItem("name") as HTMLInputElement)?.value || "";
     const phoneValue = (form.elements.namedItem("whatsapp") as HTMLInputElement)?.value || "";
@@ -41,7 +41,27 @@ export default function Join({ locale = "en" }: JoinProps) {
       return;
     }
 
-    form.submit();
+    const data = new FormData(form);
+    data.set("_subject", "PeakU Guia gratuita para reclutadores");
+    data.set("_captcha", "false");
+    data.set("_template", "table");
+    data.set("_cc", "santiago@peaku.co");
+
+    try {
+      const response = await fetch("https://formsubmit.co/luisa@peaku.co", {
+        method: "POST",
+        body: data,
+      });
+      if (!response.ok) {
+        throw new Error("Error sending form");
+      }
+      window.location.href = thankYouUrl;
+    } catch (error) {
+      window.alert(isEs
+        ? "Ocurrió un error al enviar. Intenta nuevamente."
+        : "There was an error sending the form. Please try again.");
+      console.error(error);
+    }
   };
 
   return (
@@ -74,7 +94,6 @@ export default function Join({ locale = "en" }: JoinProps) {
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_cc" value="santiago@peaku.co" />
-                <input type="hidden" name="_next" value={thankYouUrl} />
 
                 <div>
                   <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="name">
